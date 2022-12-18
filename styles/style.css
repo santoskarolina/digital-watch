@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+    background-size: cover;
+}
+
+.clock__container{
+    display:flex;
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.clock__header{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.clock__header__content{
+    width: 46rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0px 8px 10px rgb(0 0 0 / 50%);
+    background-color: rgba(88, 85, 85, 0.281);
+
+    border-radius: 1rem;
+
+    padding: 0.2rem;
+}
+
+.clock__header span{
+    font-weight: bolder;
+    font-size: 3.75rem;
+    color: #fff
+}
+
+.clock__boxes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    border-radius: 3px;
+
+    border-radius: 2rem;
+}
+
+.clock__box{
+    width: 11rem;
+    height: 12rem;
+    margin: 2rem;
+    border-radius: 2rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0px 8px 10px rgb(0 0 0 / 50%);
+    color: #fff;
+}
+
+.clock__box span{
+    font-weight: bolder;
+    font-size: 3.75rem;
+}
+
+.clock__box p{
+    font-size: 1.625rem;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+   .clock__boxes{
+    flex-direction: column;
+   }
+
+   .clock__header__content{
+    width: 80% !important;
+   }
+
+   .clock__box{
+    margin: 0.6rem;
+   }
+  }
