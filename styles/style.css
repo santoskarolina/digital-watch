@@ -9,6 +9,7 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: 'Ubuntu', sans-serif;
+    background-image: url(../assets/afternoon.jpg);
     background-color: #eee;
     background-size: cover;
 }
@@ -65,7 +66,7 @@ body{
     border-radius: 2rem;
     padding: 1rem;
 
-    background-color: #7B9EBED2;
+    background-color: transparent;
 
     display: flex;
     flex-direction: column;

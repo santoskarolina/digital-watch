@@ -48,5 +48,5 @@ function setStylePage(time){
   timeBox.forEach(element => element.style.backgroundColor = steClockBoxColor(time))
 }
 
-setInterval(configureClockTimes, 1000)
-setInterval(checkTimeOfDay, 1000)
+setInterval(configureClockTimes(), 1000)
+setInterval(checkTimeOfDay(), 1000)
