@@ -37,12 +37,12 @@ body{
 
     border-radius: 1rem;
 
-    padding: 0.2rem;
+    padding: 0.6rem;
 }
 
 .clock__header span{
     font-weight: bolder;
-    font-size: 3.75rem;
+    font-size: 3rem;
     color: #fff
 }
 

@@ -1,12 +1,3 @@
-export function setMessageOfTheDay(time) {
-  const messages = {
-    morning: "Bom dia!",
-    afternoon: "Boa tarde!",
-    night: "Boa noite!",
-  };
-  return messages[time];
-}
-
 export function setBackgroundImage(time) {
   const photos = {
     morning: "url('./assets/morning.jpg')",

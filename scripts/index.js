@@ -1,7 +1,7 @@
-import { TimeOfDay, MessageOfTheDay } from "../models/time-of-the-day.js"
-import { setBackgroundImage,steClockBoxColor, setMessageOfTheDay } from "./pageStyle.js"
+import { TimeOfDay, MessageOfTheDay, monthsOfYear } from "../models/time-of-the-day.js"
+import { setBackgroundImage,steClockBoxColor } from "./pageStyle.js"
 
-const textWithMessage = document.querySelector('#clock__header')
+const currenteDate = document.querySelector('#clock__header')
 const timeBox = document.querySelectorAll('.clock__box')
 const hourText = document.querySelector('#hour')
 const minutesText = document.querySelector('#minutes')
@@ -20,6 +20,14 @@ function configureClockTimes() {
   hourText.innerText = configureClockVariables().currentHour
   minutesText.innerText = configureClockVariables().currentMinute
   secondsText.innerText = configureClockVariables().currentSecond
+  currenteDate.innerText = formatCurrenDateString()
+}
+
+function formatCurrenDateString(){
+  const currentDate = configureClockVariables().currentDate
+  let formatDate = currentDate.getDate() + " de " + monthsOfYear[(currentDate.getMonth())] + " de " + currentDate.getFullYear()
+
+  return formatDate
 }
 
 function checkTimeOfDay() {
@@ -38,7 +46,6 @@ function checkTimeOfDay() {
 function setStylePage(time){
   document.body.style.backgroundImage = setBackgroundImage(time)
   timeBox.forEach(element => element.style.backgroundColor = steClockBoxColor(time))
-  textWithMessage.innerText = setMessageOfTheDay(time)
 }
 
 setInterval(configureClockTimes, 1000)
