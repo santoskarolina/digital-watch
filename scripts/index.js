@@ -10,7 +10,7 @@ const secondsText = document.querySelector('#seconds')
 function configureClockVariables() {
   let currentDate = new Date()
   const currentHour = currentDate.getHours()
-  const currentMinute = currentDate.getMinutes()
+  const currentMinute = currentDate.getMinutes() < 10 ? `0${currentDate.getMinutes()}` : currentDate.getMinutes()
   const currentSecond = currentDate.getSeconds() < 10 ? `0${currentDate.getSeconds()}` : currentDate.getSeconds()
 
   return { currentDate, currentHour, currentMinute, currentSecond }
@@ -35,7 +35,7 @@ function checkTimeOfDay() {
   if (configureClockVariables().currentHour < TimeOfDay.END_OF_THE_DAY) {
     time = MessageOfTheDay.morning
   } else if (configureClockVariables().currentHour < TimeOfDay.NIGHTS_START) {
-    time = MessageOfTheDay.afternoon
+    time = MessageOfTheDay.afternoon  
   } else {
     time = MessageOfTheDay.night
   }
